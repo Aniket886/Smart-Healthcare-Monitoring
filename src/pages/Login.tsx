@@ -84,8 +84,8 @@ export default function Login() {
         </p>
       </div>
 
-      <div className="relative z-10 w-full max-w-md mt-6">
-        <Footer />
+      <div className="relative z-10 w-full max-w-md mt-4">
+        <Footer centered />
       </div>
     </div>
   )
