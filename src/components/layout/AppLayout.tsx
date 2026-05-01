@@ -4,9 +4,10 @@ import { useAuthStore } from '../../store/authStore'
 import { useAlertsStore } from '../../store/alertsStore'
 import {
   LayoutDashboard, Users, Bell, Settings, LogOut,
-  Menu, X, Activity, ChevronRight,
+  Menu, X, ChevronRight,
 } from 'lucide-react'
 import Footer from '../common/Footer'
+import logo from '../../assets/logo.png'
 
 const NAV = [
   { to: '/dashboard',  label: 'Dashboard',  icon: LayoutDashboard },
@@ -39,9 +40,7 @@ export default function AppLayout() {
       `}>
         {/* Logo */}
         <div className="flex items-center gap-3 px-5 py-5 border-b border-slate-800">
-          <div className="w-9 h-9 bg-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0">
-            <Activity className="w-5 h-5 text-white" />
-          </div>
+          <img src={logo} alt="SHM Logo" className="w-9 h-9 rounded-lg object-cover flex-shrink-0" />
           <div>
             <p className="font-bold text-sm text-white leading-tight">Smart Health</p>
             <p className="text-xs text-slate-400">Monitoring System</p>
@@ -103,7 +102,7 @@ export default function AppLayout() {
             <Menu className="w-5 h-5" />
           </button>
           <div className="flex items-center gap-2">
-            <Activity className="w-4 h-4 text-emerald-400" />
+            <img src={logo} alt="SHM" className="w-6 h-6 rounded object-cover" />
             <span className="font-semibold text-sm">Smart Health Monitor</span>
           </div>
           {unread > 0 && (

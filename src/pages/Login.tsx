@@ -1,8 +1,9 @@
 import { useNavigate } from 'react-router-dom'
 import { useAuthStore } from '../store/authStore'
-import { Activity, Stethoscope, HeartPulse, Users } from 'lucide-react'
+import { Stethoscope, HeartPulse, Users } from 'lucide-react'
 import type { UserRole } from '../types'
 import Footer from '../components/common/Footer'
+import logo from '../assets/logo.png'
 
 const roles: { role: UserRole; label: string; desc: string; icon: React.ReactNode; color: string }[] = [
   {
@@ -45,9 +46,7 @@ export default function Login() {
       <div className="relative z-10 w-full max-w-md">
         {/* Header */}
         <div className="text-center mb-10">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-500 rounded-2xl mb-4 shadow-lg shadow-emerald-500/30">
-            <Activity className="w-8 h-8 text-white" />
-          </div>
+          <img src={logo} alt="Smart Health Monitor" className="w-20 h-20 rounded-2xl object-cover mb-4 shadow-lg shadow-black/40 mx-auto" />
           <h1 className="text-3xl font-bold text-white mb-2">Smart Health Monitor</h1>
           <p className="text-slate-400 text-sm">IoT-powered real-time patient vitals monitoring</p>
           <div className="flex items-center justify-center gap-4 mt-4 text-xs text-slate-600">

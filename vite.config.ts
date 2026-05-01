@@ -12,7 +12,7 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'icons/*.png'],
+      includeAssets: ['logo.png', 'icons/*.png'],
       manifest: {
         name: 'Smart Healthcare Monitoring',
         short_name: 'SHM',
@@ -24,8 +24,9 @@ export default defineConfig({
         scope: '/',
         start_url: '/',
         icons: [
+          { src: '/logo.png', sizes: '1254x1254', type: 'image/png', purpose: 'any maskable' },
           { src: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' },
-          { src: '/icons/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any maskable' },
+          { src: '/icons/icon-512.png', sizes: '512x512', type: 'image/png' },
         ],
       },
       workbox: {
