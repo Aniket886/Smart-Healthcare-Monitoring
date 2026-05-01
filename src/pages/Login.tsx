@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import { useAuthStore } from '../store/authStore'
 import { Activity, Stethoscope, HeartPulse, Users } from 'lucide-react'
 import type { UserRole } from '../types'
+import Footer from '../components/common/Footer'
 
 const roles: { role: UserRole; label: string; desc: string; icon: React.ReactNode; color: string }[] = [
   {
@@ -81,6 +82,10 @@ export default function Login() {
         <p className="text-center text-xs text-slate-700 mt-8">
           Prototype · Demo Data · No real patient information
         </p>
+      </div>
+
+      <div className="relative z-10 w-full max-w-md mt-6">
+        <Footer />
       </div>
     </div>
   )

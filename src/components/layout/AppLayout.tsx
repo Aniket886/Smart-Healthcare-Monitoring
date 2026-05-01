@@ -6,6 +6,7 @@ import {
   LayoutDashboard, Users, Bell, Settings, LogOut,
   Menu, X, Activity, ChevronRight,
 } from 'lucide-react'
+import Footer from '../common/Footer'
 
 const NAV = [
   { to: '/dashboard',  label: 'Dashboard',  icon: LayoutDashboard },
@@ -114,6 +115,7 @@ export default function AppLayout() {
         <main className="flex-1 overflow-y-auto bg-slate-950">
           <Outlet />
         </main>
+        <Footer />
       </div>
     </div>
   )
